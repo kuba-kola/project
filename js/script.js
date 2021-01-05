@@ -1,19 +1,21 @@
 "use strict";
 
-const category = 'toys';
+const numberOfFilms = +prompt("Сколько фильмов вы уже просмотрели", "");
 
-console.log(`https://someurl.com/${category}/5`); 
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat : false
+};
 
-let incr = 10,
-decr = 10 ;
+const a = prompt ('Один из последний просмотренных фильмов?', ""),
+      b = prompt ('На сколько оценице его?', ""),
+      c = prompt ('Один из последний просмотренных фильмов?', ""),
+      d = prompt ('На сколько оценице его?', "");
 
-// ++incr;
-// --decr;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-console.log(incr++);
-console.log(decr--);
-
-const isChecked = true,
-      isClosed = false;
-
-console.log(!isChecked || isClosed);
+console.log(personalMovieDB);
